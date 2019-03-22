@@ -6,13 +6,14 @@
   </head>
   <body>
     <div class="container">
+      <h1>Dr.Finder</h1>
       <form class="search">
         <h4>Enter your address:</h4>
         <div class="form-row">
-          <div class="col-4">
+          <div class="col-5">
             <input type="text" name="location" class="location form-control" required>
           </div>
-          <div class="col-4">
+          <div class="col-5">
             <input type="number" name="distance" value="50" class="distance form-control">
           </div>
           <div class="col">
@@ -21,18 +22,18 @@
         </div>
         <h4>Search By:</h4>
         <div class="form-row">
-          <div class="col-4">
+          <div class="col-5">
             <select class="selection form-control">
               <option value="first_name">Doctor's First Name</option>
               <option value="last_name">Doctor's Last Name</option>
               <option value="query">Body Part</option>
             </select>
           </div>
-          <div class="col-4">
+          <div class="col-5">
             <input type="text" name="input" class="searchTerm form-control" required>
           </div>
           <div class="col">
-            <button class="btn btn-outline-secondary" type="submit" name="button">Search</button>
+            <button class="btn btn-outline-primary" type="submit" name="button">Search</button>
           </div>
         </div>
       </form>
