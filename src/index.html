@@ -7,7 +7,7 @@
   <body>
     <form class="search">
       <h4>Enter your address:</h4>
-      <input type="text" name="location" class="location">
+      <input type="text" name="location" class="location" required>
       <input type="number" name="distance" value="50" class="distance">
       <label for="distance">miles</label>
       <h4>Search By:</h4>
@@ -16,11 +16,12 @@
         <option value="last_name">Doctor's Last Name</option>
         <option value="query">Body Part</option>
       </select>
-      <input type="text" name="input" class="searchTerm">
+      <input type="text" name="input" class="searchTerm" required>
       <button type="submit" name="button">Search</button>
     </form>
+    <div class="error">
+    </div>
     <section class="results">
-
     </section>
   </body>
 </html>

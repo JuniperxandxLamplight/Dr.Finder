@@ -4,6 +4,7 @@ export class LocationSearch{
       let request = new XMLHttpRequest();
       let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${process.env.exports.geocodeKey}`;
       request.onload = function() {
+        console.log(request.statusText);
         if (this.status === 200) {
           resolve(request.response);
         } else{
