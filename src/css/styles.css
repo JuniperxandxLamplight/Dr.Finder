@@ -1,15 +1,7 @@
-.cell {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(0,0,0,0.1);
-  border: 1px solid black;
+img{
+  height: 100%;
+  width: auto;
 }
-.row {
-  width: 900px;
-  height: 100px;
-}
-
-.wrapper {
-  width: 900px;
-  height: 900px;
+.result{
+  display: flex;
 }
