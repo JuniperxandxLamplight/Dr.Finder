@@ -1,10 +1,25 @@
+body{
+  font-size: 1rem;
+}
+p{
+  margin: .5rem auto;
+}
 img{
+  border-top-left-radius: 10px;
   height: 100%;
   width: auto;
+  margin-right: .5rem;
+  border: 2px solid #007bff;
+}
+.error p{
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 5px;
+  color: red;
 }
 .result{
   display: flex;
-}
-.error{
-  color: red;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 1rem;
 }

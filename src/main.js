@@ -1,8 +1,7 @@
-import './css/framework.css';
-import './css/styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
 import {DoctorSearch, LocationSearch} from './api.js';
 import {concatLocation} from './backEnd.js';
 
