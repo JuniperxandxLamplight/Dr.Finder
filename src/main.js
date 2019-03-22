@@ -12,9 +12,10 @@ $(function(){
 
     $('.results').empty();
 
-    let searchParameters = $(".input1").val();
+    const searchType = $('.selection').val();
+    const searchParameters = $(".input1").val();
 
-    const getDoctors = apiCall.getDoctor(searchParameters);
+    const getDoctors = apiCall.getDoctor(searchType, searchParameters);
 
     getDoctors.then(function(response) {
       let body = JSON.parse(response);
