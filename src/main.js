@@ -2,20 +2,35 @@ import './css/styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {DoctorSearch} from './api.js';
+import {DoctorSearch, LocationSearch} from './api.js';
+import {concatLocation} from './backEnd.js';
 
 $(function(){
-  const apiCall = new DoctorSearch;
+  const locationApi = new LocationSearch;
+  const doctorApi = new DoctorSearch;
 
   $(".search").submit(function(event){
     event.preventDefault();
 
     $('.results').empty();
 
-    const searchType = $('.selection').val();
-    const searchParameters = $(".input1").val();
+    let locationRaw = $('.location').val();
+    const location = concatLocation(locationRaw);
 
-    const getDoctors = apiCall.getDoctor(searchType, searchParameters);
+    const getGeocode = locationApi.getLocation(location);
+
+
+    getGeocode.then(function(response) {
+      let body = JSON.parse(response);
+      console.log(body);
+    }, function(error) {
+      $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+    });
+
+    const searchType = $('.selection').val();
+    const searchParameters = $(".searhTerm").val();
+
+    const getDoctors = doctorApi.getDoctor(searchType, searchParameters);
 
     getDoctors.then(function(response) {
       let body = JSON.parse(response);
