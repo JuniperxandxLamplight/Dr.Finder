@@ -54,5 +54,7 @@ $(function(){
       console.log(error);
     });
 
+    $('.location').val("");
+    $(".searchTerm").val("")
   });
 });
